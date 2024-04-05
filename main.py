@@ -1,8 +1,11 @@
 from flask import Flask, jsonify
 import os
+import chromadb
 
 app = Flask(__name__)
 
+
+db = chromadb.HttpClient(host=os.getenv('CHROMA_DB_HOST', 'chroma.railway.internal'))
 
 @app.route('/')
 def index():
