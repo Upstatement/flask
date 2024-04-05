@@ -4,6 +4,7 @@ description: A popular minimal server framework for Python
 tags:
   - python
   - flask
+  - chroma
 ---
 
 # Python Flask Example
@@ -16,6 +17,7 @@ This is a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a
 
 - Python
 - Flask
+- Chromadb
 
 ## 💁‍♀️ How to use
 
