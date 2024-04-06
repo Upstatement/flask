@@ -5,9 +5,9 @@ import chromadb
 app = Flask(__name__)
 
 client = chromadb.HttpClient(
-    host=os.getenv('CHROMA_DB_HOST', 'chroma.railway.internal')
+    host=os.getenv('CHROMA_DB_HOST', 'chroma.railway.internal'),
     settings=chromadb.config.Settings(chroma_client_auth_provider="chromadb.auth.token.TokenAuthClientProvider",
-                                      chroma_client_auth_credentials=os.getenv('CHROMA_DB_AUTH_CREDENTIALS'))
+                                      chroma_client_auth_credentials=os.getenv('CHROMA_DB_AUTH_CREDENTIALS')))
 
 client.heartbeat()  # this should work with or without authentication - it is a public endpoint
 
